@@ -642,7 +642,7 @@ impl FtpStream {
     }
 
     /// Read response from stream
-    fn read_response(&mut self, expected_code: Status) -> FtpResult<Response> {
+    pub fn read_response(&mut self, expected_code: Status) -> FtpResult<Response> {
         self.read_response_in(&[expected_code])
     }
 
